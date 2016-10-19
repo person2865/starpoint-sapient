@@ -1,0 +1,22 @@
+{
+  "name": "starpoint-sapient",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Programming Quiz for Sapient",
+  "repository": "https://github.com/person2865/startpoint-sapient",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "clean": "grunt clean",
+    "start": "grunt serve"
+  }
+}
