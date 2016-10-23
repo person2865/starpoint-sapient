@@ -16,7 +16,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       options: {
-        livereload: true
+        livereload: true,
+        debounceDelay: 250
       },
       files: ['./app/index.html', './app/site/**/*.*'],
       tasks: ['build']
@@ -33,6 +34,8 @@ module.exports = function(grunt) {
           expand: true, cwd: './node_modules/bootstrap/dist/', src: 'css/**/*.*', dest: './app/vendor/bootstrap/css/', flatten: true, filter: 'isFile'
         }, {
           expand: true, cwd: './node_modules/bootstrap/dist/', src: 'fonts/**/*.*', dest: './app/vendor/bootstrap/fonts/', flatten: true, filter: 'isFile'
+        }, {
+          expand: true, cwd: './node_modules/angular-ui-router/release/', src: 'angular-ui-router.min.js', dest: './app/vendor/angular/', flatten: true, filter: 'isFile'
         }]
       },
       dist: {
@@ -51,6 +54,7 @@ module.exports = function(grunt) {
           livereload: true,
           port: PORT,
           base: './dist/',
+          hostname: 'localhost',
           open: 'http://localhost:' + PORT
         }
       }

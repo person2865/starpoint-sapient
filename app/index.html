@@ -1,33 +1,43 @@
 <!doctype html>
 <html ng-app="starpointApp">
 <head>
-    <script src="//localhost:35729/livereload.js"></script>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="site/starpoint.css" rel="stylesheet">
 
     <title>StarPoint - Sapient</title>
 </head>
 <body>
-    <header class="page-header">
-        <h1>Programming Quiz: Starpoint - Sapient</h1>
-    </header>
-    <nav class="navbar">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="question1">Question 1</a></li>
+            <li><a ui-sref="question2">Question 2</a></li>
+        </ul>
+    </div>
+</nav>
 
-    </nav>
-    <section class="container-fluid" ng-controller="MainCtrl">
-       <div class="row">
-           <div class="col-md-6">{{ greet }}</div>
-           <div class="col-md-offset-1 col-md-5">
-               <button class="btn-primary" ng-click="triggerException()">Reply</button>
-           </div>
-       </div>
-    </section>
-    <footer>
+<header class="container page-header">
+    <h1>Programming Quiz: Starpoint - Sapient</h1>
+</header>
 
-    </footer>
+<section class="container" ui-view></section>
+
+<footer>
+</footer>
 
 
-    <script src="vendor/angular/angular.min.js"></script>
-    <script src="site/starpoint.module.js"></script>
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular/angular-ui-router.min.js"></script>
+
+<script src="site/starpoint.module.js"></script>
+<script src="site/lang/langMessages.constants.js"></script>
+<script src="site/starpointMain.controller.js"></script>
+<script src="site/exceptionDecorator/exceptionDecorator.controller.js"></script>
+<script src="site/subsetArguments/subsetArguments.service.js"></script>
+<script src="site/subsetArguments/subsetArguments.controller.js"></script>
+
 </body>
 </html>

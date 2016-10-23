@@ -1,0 +1,22 @@
+<h2>{{pageTitle}}</h2>
+<p>{{ question }}</p>
+<p><a ui-sref="home">Go Home</a></p>
+
+<section class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="inputArgs">{{ ::lang.subsetArguments.argumentsLbl }}:</label>
+            <input id="inputArgs" type="text" ng-model="inputArgs" value="inputArgs"/>
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+            <button class="btn btn-primary" ng-click="handleExecFnClick()">
+                {{ ::lang.subsetArguments.execFnBtnTxt}}
+            </button>
+        </div>
+    </div>
+    <div class="row" ng-if="result">
+        <div class="col-md-12 bg-success">
+            {{ result }}
+        </div>
+    </div>
+</section>

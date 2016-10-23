@@ -1,0 +1,18 @@
+<h2>{{pageTitle}}</h2>
+<p>{{ question }}</p>
+<p><a ui-sref="home">{{ ::lang.common.goHome }}</a></p>
+<section class="container">
+    <div class="row">
+        <p class="info-box bg-warning" ng-show="showMessage">{{::lang.exceptionDecorator.infoMessage}}</p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            {{ greeting }}
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+            <button class="btn btn-primary" ng-click="handleReplyBtnClick()">
+                {{ ::lang.exceptionDecorator.replyBtnTxt }}
+            </button>
+        </div>
+    </div>
+</section>
